@@ -4,50 +4,65 @@
     --border-color: #E29578;
     --padding-color: #83C5BE;
     --darker-color: #006D77;
+    --nav-text: #F62681;
+    --gradient: linear-gradient(#83C5BE, #006D77);
+    --shadow: black 1px 0 8px;
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--bg-color);
-}
-
-header {
-    background-color: var(--darker-color);
+    background-image: var(--gradient);
+    background-repeat: no-repeat;
 }
 
 h1 {
-    color: #F62681;
+    color: var(--nav-text);
+    font-weight: 750;
     text-shadow: black 1px 0 8px;
     justify-self: flex-start;
-    padding-left: 50px;
+    padding: 10px 12px 10px 50px;
+    border-radius: 0px 8px 8px 0px;
+    background-color: var(--padding-color);
 }
 
 h2 {
-    position: relative;
-    padding-top: 80px;
+    color: var(--nav-text);
+    text-shadow: var(--shadow);
+    border-radius: 0px 8px 8px 0px;
+    background-color: var(--darker-color);
+    width: 125px;
 }
 
 .navbar {
     background-color: var(--darker-color);
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
+    min-height: 90px;
     display: flex;
     flex-flow: wrap;
     justify-content: space-between;
 }
 
 .navbar a {
+    flex: 0 0 auto;
     background-color: var(--padding-color);
     padding: 25px;
+    min-width: 95px;
     text-decoration: none;
     font-family: Helvetica, sans-serif;
     font-weight: 600;
     font-size: large;
     border-radius: 8%;
-    color: #F62681;
-    text-shadow: -2px 2px 5px black;
+    color: var(--nav-text);
+    text-shadow: var(--shadow);
+    transition: all .3s .1s;
+}
+
+.navbar a:hover {
+    box-shadow: 0px 8px 30px 10px #0ff;
 }
 
 .list {
@@ -59,10 +74,11 @@ h2 {
 
 
 .portrait {
-    padding-top: 50px;
     background-color: var(--padding-color);
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-content: center;
 }
 
 .portrait figure {
@@ -70,12 +86,46 @@ h2 {
     padding-left: 20px;
     border-bottom: 20px var(--darker-color) solid;
     background-color: var(--container-color);
-    flex: auto;
+    flex: 1 1 100%;
+    width: 100%;
     margin: auto;
 }
 
 .portrait figure img {
     border-radius: 8%;
+}
+
+/* This is a container for the left and right side content. */
+.content-container {
+    display: flex;
+    width: 100%;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 60px;
+    gap: 25px;
+}
+
+.content-item {
+    position: relative;
+    display: flex;
+    width: 75%;
+    flex: 0 0 auto;
+    border: 3px red solid;
+    min-height: 100px;
+}
+
+.link {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    color: var(--nav-text);
+    text-decoration: none;
+    background-color: var(--padding-color);
+}
+
+.first-item {
+    min-height: 200px;
 }
 
 @media screen and (max-width: 768px) {
@@ -85,5 +135,6 @@ h2 {
 
     .navbar {
         justify-content: right;
+        white-space: nowrap;
     }
   }
