@@ -28,6 +28,7 @@ h1 {
 }
 
 h2 {
+    display: block;
     color: var(--nav-text);
     text-shadow: var(--shadow);
     border-radius: 0px 8px 8px 0px;
@@ -72,27 +73,46 @@ h2 {
     padding-right: 20px;
 }
 
-
 .portrait {
     background-color: var(--padding-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    min-height: 30vh;
+    width: auto;
 }
 
-.portrait figure {
+.portrait div {
+    display: flex;
+    position: relative;
     padding-top: 20px;
     padding-left: 20px;
-    border-bottom: 20px var(--darker-color) solid;
-    background-color: var(--container-color);
-    flex: 1 1 100%;
-    width: 100%;
-    margin: auto;
+    border: 11px var(--darker-color) solid;
+    background-image: url("../images/orange-tile.png"), var(--gradient);
+    background-blend-mode: luminosity;
+    background-size: cover;
+    background-position: center;
+    flex: 0 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.portrait figure img {
+.portrait div p {
+    padding-right: 20px;
+    padding-left: 20px;
+    color: var(--nav-text);
+    text-shadow: var(--shadow);
+    font-size: larger;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.50));
+    background-blend-mode: soft-light;
+}
+
+.portrait div img {
     border-radius: 8%;
+    padding-bottom: 12px;
+    white-space: nowrap;
 }
 
 /* This is a container for the left and right side content. */
