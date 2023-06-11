@@ -38,15 +38,9 @@ h2 {
     white-space: nowrap;
 }
 
-h3 {
-    display: block;
-    color: var(--nav-text);
-    text-shadow: var(--shadow);
-    border-radius: 0px 8px 8px 0px;
+footer {
     background-color: var(--darker-color);
-    width: 125px;
-    padding-left: 12px;
-    white-space: nowrap;
+    padding: 10px;
 }
 
 .navbar {
@@ -133,7 +127,7 @@ h3 {
 /* This is a container for the work items */
 .content-container {
     display: flex;
-    width: 100%;
+    width: auto;
     align-content: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -170,15 +164,56 @@ h3 {
     width: 75%;
 }
 
+h3 {
+    display: block;
+    color: var(--nav-text);
+    text-shadow: var(--shadow);
+    border-radius: 0px 8px 8px 0px;
+    background-color: var(--padding-color);
+    width: 125px;
+    padding-left: 12px;
+    white-space: nowrap;
+}
+
+.contact-me {
+    background-color: var(--darker-color);
+    top: 0;
+    width: 100%;
+    min-height: 90px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.contact-me a {
+    flex: 0 0 auto;
+    background-color: var(--padding-color);
+    padding: 19px 25px 25px 25px;
+    min-width: 95px;
+    text-decoration: none;
+    font-family: Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: large;
+    border-radius: 0 0 12% 12px;
+    color: var(--nav-text);
+    text-shadow: var(--shadow);
+    transition: all .3s .1s;
+}
+
+.contact-me a:hover {
+    box-shadow: 0px 8px 30px 10px #F62681;
+}
+
 .study {
     background-image: url("../images/study.png");
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
 }
 
 .refactor {
     background-image: url("../images/horiseon-r.png");
-    background-size: cover;
+    background-size: 60%;
     background-position: center;
 }
 
@@ -188,6 +223,11 @@ h3 {
     background-position: center;
 }
 
+.sample {
+    background-image: url("../images/question-tile.png");
+    background-size: 80%;
+    background-position: center;
+}
 
 /* Dynamically resizes elements for medium screens */
 @media screen and (max-width: 980px) {
