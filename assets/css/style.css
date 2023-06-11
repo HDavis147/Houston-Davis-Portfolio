@@ -6,7 +6,7 @@
     --darker-color: #006D77;
     --nav-text: #F62681;
     --gradient: linear-gradient(#83C5BE, #006D77);
-    --shadow: black 1px 0 8px;
+    --shadow: black 1px 0 10px;
 }
 
 body {
@@ -34,11 +34,23 @@ h2 {
     border-radius: 0px 8px 8px 0px;
     background-color: var(--darker-color);
     width: 125px;
+    padding-left: 12px;
+    white-space: nowrap;
+}
+
+h3 {
+    display: block;
+    color: var(--nav-text);
+    text-shadow: var(--shadow);
+    border-radius: 0px 8px 8px 0px;
+    background-color: var(--darker-color);
+    width: 125px;
+    padding-left: 12px;
+    white-space: nowrap;
 }
 
 .navbar {
     background-color: var(--darker-color);
-    position: sticky;
     top: 0;
     width: 100%;
     min-height: 90px;
@@ -100,11 +112,14 @@ h2 {
 }
 
 .portrait div p {
-    padding-right: 20px;
-    padding-left: 20px;
+    position: absolute;
+    left: 260px;
+    right: auto;
+    padding: 0px 20px 4px 20px;
     color: var(--nav-text);
     text-shadow: var(--shadow);
-    font-size: larger;
+    border-radius: 12px;
+    font-size: 20px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.50));
     background-blend-mode: soft-light;
 }
@@ -115,39 +130,82 @@ h2 {
     white-space: nowrap;
 }
 
-/* This is a container for the left and right side content. */
+/* This is a container for the work items */
 .content-container {
     display: flex;
     width: 100%;
     align-content: center;
+    justify-content: center;
     flex-wrap: wrap;
-    flex-direction: column;
-    padding-top: 60px;
+    flex-direction: row;
+    padding: 20px;
     gap: 25px;
 }
 
 .content-item {
     position: relative;
     display: flex;
-    width: 75%;
+    width: 32%;
     flex: 0 0 auto;
     border: 3px red solid;
-    min-height: 100px;
+    min-height: 200px;
 }
 
 .link {
     position: absolute;
-    bottom: 8px;
+    bottom: -20px;
     left: 16px;
     color: var(--nav-text);
     text-decoration: none;
+    text-shadow: var(--shadow);
+    font-size: 30px;
+    padding: 10px;
     background-color: var(--padding-color);
+    border: 4px var(--darker-color) solid;
+    border-radius: 12px;
 }
 
 .first-item {
-    min-height: 200px;
+    min-height: 300px;
+    width: 75%;
 }
 
+.study {
+    background-image: url("../images/study.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.refactor {
+    background-image: url("../images/horiseon-r.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.randy {
+    background-image: url("../images/randy.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Dynamically resizes elements for medium screens */
+@media screen and (max-width: 980px) {
+    .portrait div {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .portrait div p{
+        position: relative;
+        max-width: 350px;
+        left: auto;
+        right: auto;
+    }
+  }
+
+/* Dynamically resizes elements for small screens */
 @media screen and (max-width: 768px) {
     h1 {
         display: none;
@@ -156,5 +214,19 @@ h2 {
     .navbar {
         justify-content: right;
         white-space: nowrap;
+    }
+
+    .content-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content-item {
+        width: 75%;
+    }
+
+    .first-item {
+        min-height: 200px;
     }
   }
