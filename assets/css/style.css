@@ -35,11 +35,6 @@ h2 {
     white-space: nowrap;
 }
 
-footer {
-    background-color: var(--darker-blue);
-    padding: 10px;
-}
-
 .navbar {
     background-color: var(--darker-blue);
     top: 0;
