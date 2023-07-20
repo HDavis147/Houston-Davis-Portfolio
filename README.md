@@ -3,7 +3,7 @@ This is a repository for Houston Davis' portfolio.
 
 ## Description
 
-This application is a portfolio page for my starter projects. It contains lihnks to my previous projects, my Github profile, and my Steam profile. 
+This application is a portfolio page for my starter projects. It contains links to my previous projects, my Github profile, and my Steam profile. 
 
 ![Landing page screenshot](assets/images/Houston-Davis-Portfolio.png)
 
