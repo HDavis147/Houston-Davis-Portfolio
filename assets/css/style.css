@@ -218,9 +218,9 @@ h3 {
     background-position: center;
 }
 
-.sample {
-    background-image: url("../images/question-tile.png");
-    background-size: 80%;
+.meow {
+    background-image: url("../images/nyan-cat.png");
+    background-size: cover;
     background-position: center;
 }
 
